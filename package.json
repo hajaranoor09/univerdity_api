@@ -1,0 +1,13 @@
+{
+  "name": "university-api-access",
+  "version": "1.0.0",
+  "description": "University API Access Management System (FSD Lab 07)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.9.7"
+  }
+}

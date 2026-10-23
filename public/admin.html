@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>University API Access – Admin Panel</h1>
+  <nav><a href="/settings">User Settings</a></nav>
+</header>
+<main>
+  <div class="card">
+    <h2>Admin authentication</h2>
+    <div class="row">
+      <input type="password" id="adminKey" placeholder="Enter admin API key">
+      <button id="loginBtn">Load panel</button>
+    </div>
+    <div id="authMsg" class="msg"></div>
+  </div>
+
+  <div id="panel" style="display:none">
+    <div id="msg" class="msg"></div>
+
+    <div class="card">
+      <h2>Generate API key</h2>
+      <div class="row">
+        <select id="ownerType">
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+        </select>
+        <select id="ownerId"></select>
+        <input type="number" id="limit" min="1" value="50" style="width:130px" placeholder="Request limit">
+        <button id="genBtn">Generate key</button>
+      </div>
+      <div id="newKey" class="msg"></div>
+    </div>
+
+    <div class="card">
+      <h2>API keys – usage &amp; status</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Owner</th><th>Key</th><th>Usage</th><th>Limit</th><th>Status</th><th>Last used</th><th>Actions</th></tr></thead>
+        <tbody id="keysBody"></tbody>
+      </table></div>
+    </div>
+
+    <div class="card" id="usageCard" style="display:none">
+      <h2 id="usageTitle">Request log</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Time</th><th>Method</th><th>Endpoint</th><th>Status</th></tr></thead>
+        <tbody id="usageBody"></tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h2>Students</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Roll no</th><th>Name</th><th>Email</th><th>Department</th><th>Sem</th></tr></thead>
+        <tbody id="studentsBody"></tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h2>Teachers</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Department</th></tr></thead>
+        <tbody id="teachersBody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

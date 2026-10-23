@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>University API Access – Settings</h1>
+  <nav><a href="/student">Student page</a><a href="/teacher">Teacher page</a></nav>
+</header>
+<main>
+  <div class="card">
+    <h2>Your API key</h2>
+    <p class="muted">Enter the API key issued to you by the administrator. It is validated and saved in this browser.</p>
+    <div class="row">
+      <input type="text" id="keyInput" placeholder="Paste your API key">
+      <button id="saveBtn">Save key</button>
+      <button id="clearBtn" class="ghost">Remove saved key</button>
+    </div>
+    <div id="msg" class="msg"></div>
+  </div>
+
+  <div class="card" id="infoCard" style="display:none">
+    <h2>Key verified</h2>
+    <div id="info"></div>
+    <p><a id="goLink" href="#"><button>Open my dashboard</button></a></p>
+  </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/settings.js"></script>
+</body>
+</html>

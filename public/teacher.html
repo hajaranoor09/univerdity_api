@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Teacher Dashboard</h1>
+  <nav><a href="/settings">Settings</a></nav>
+</header>
+<main>
+  <div id="msg" class="msg"></div>
+
+  <div class="card">
+    <h2 id="welcome">Teacher</h2>
+    <p class="muted" id="usage"></p>
+  </div>
+
+  <div class="card">
+    <h2>All students</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Roll no</th><th>Name</th><th>Email</th><th>Department</th><th>Sem</th></tr></thead>
+      <tbody id="studentsBody"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h2>Marks of all students</h2>
+    <div class="row" style="margin-bottom:10px">
+      <input type="text" id="search" placeholder="Filter by student name, roll no or course">
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Roll no</th><th>Student</th><th>Course</th><th>Assignment</th><th>Midterm</th><th>Final</th><th>Total</th></tr></thead>
+      <tbody id="marksBody"></tbody>
+    </table></div>
+  </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/teacher.js"></script>
+</body>
+</html>

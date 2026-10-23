@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Student Dashboard</h1>
+  <nav><a href="/settings">Settings</a></nav>
+</header>
+<main>
+  <div id="msg" class="msg"></div>
+
+  <div class="card">
+    <h2>My information</h2>
+    <div class="grid2" id="profile"></div>
+    <p class="muted" id="usage"></p>
+  </div>
+
+  <div class="card">
+    <h2>My academic marks</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Course</th><th>Title</th><th>Assignment /20</th><th>Midterm /30</th><th>Final /50</th><th>Total /100</th></tr></thead>
+      <tbody id="marksBody"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h2>Access-control test</h2>
+    <p class="muted">Try to load another student's record by id. The server must answer 403.</p>
+    <div class="row">
+      <input type="number" id="otherId" min="1" value="2" style="width:100px">
+      <button id="tryBtn" class="ghost">Request /api/students/:id/marks</button>
+    </div>
+    <div id="tryMsg" class="msg"></div>
+  </div>
+</main>
+<script src="/js/common.js"></script>
+<script src="/js/student.js"></script>
+</body>
+</html>
